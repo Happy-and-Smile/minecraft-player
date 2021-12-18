@@ -1,4 +1,4 @@
-# Mineflayer
+# Minecraft-Player
 
 [![NPM version](https://badge.fury.io/js/mineflayer.svg)](http://badge.fury.io/js/mineflayer)
 [![Build Status](https://github.com/PrismarineJS/mineflayer/workflows/CI/badge.svg)](https://github.com/PrismarineJS/mineflayer/actions?query=workflow%3A%22CI%22)
@@ -232,6 +232,9 @@ Mineflayer 是可插拔的；任何人都可以创建一个插件，在 Mineflay
 ### 测试指定测试脚本
 
 运行 `npm mocha_test -- -g <test_name>`，其中 `<test_name>` 是测试名称，例如 `bed`, `useChests`, `rayTrace`...
+
+## 注意事项
+这个代码是从[mineflayer](https://github.com/PrismarineJS/mineflayer) 复制并更改了其内容和依赖库 minecraft-protocol 和 yggdrasil. 制作这些更改的原因是因为要添加支援[McLeaks](https://mcleaks.net) 和 [EasyMC](https://easymc.io) 的验证自从mineflayer无法添加对于Mojang和Microsoft无关的验证方式。除此之外，此代码的开发者也是一个JS的自学者。因此，所有的许可证都归还给原开发者，如果有任何版权问题，我们将不会负责。
 
 ## 许可证
 
