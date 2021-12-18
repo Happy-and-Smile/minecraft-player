@@ -1,4 +1,4 @@
-# Mineflayer
+# Minecraft-Player
 
 [![NPM version](https://badge.fury.io/js/mineflayer.svg)](http://badge.fury.io/js/mineflayer)
 [![Build Status](https://github.com/PrismarineJS/mineflayer/workflows/CI/badge.svg)](https://github.com/PrismarineJS/mineflayer/actions?query=workflow%3A%22CI%22)
@@ -231,6 +231,9 @@ Run `npm mocha_test -- -g <version>`, where `<version>` is a minecraft version l
 
 ### Testing specific test
 Run `npm mocha_test -- -g <test_name>`, where `<test_name>` is a name of the test like `bed`, `useChests`, `rayTrace`...
+
+## Important Things You Need To Know
+This Source Code is cloned from [mineflayer](https://github.com/PrismarineJS/mineflayer) which have modified the dependencies minecraft-protocol and yggdrasil. Making this changes is to add support for [McLeaks](https://mcleaks.net) and [EasyMC](https://easymc.io) auth since mineflayer cannot add support for any auth that does not handle any of the mojang authentication. Apart from that, the collaborator is a self-study people for javascript. Therefore, the Licence is given to the original developer, if still have any copyright issue, we won't be responsible.
 
 ## License
 
