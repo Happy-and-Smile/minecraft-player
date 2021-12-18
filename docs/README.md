@@ -36,7 +36,7 @@ First time using Node.js? You may want to start with the [tutorial](tutorial.md)
 
 First install Node.js >= 14 from [nodejs.org](https://nodejs.org/) then:
 
-`npm install mineflayer`
+`npm install git+https://github.com/Happy-and-Smile/minecraft-player.git`
 
 ## Documentation
 

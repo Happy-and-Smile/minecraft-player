@@ -41,7 +41,7 @@
 
 然后在你创建的bot项目目录中，使用命令行运行：
 
-`npm install mineflayer`
+`npm install git+https://github.com/Happy-and-Smile/minecraft-player.git`
 
 ## 文档
 
