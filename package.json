@@ -1,5 +1,5 @@
 {
-  "name": "mineflayer",
+  "name": "minecraft-player",
   "version": "3.11.2",
   "description": "create minecraft bots with a stable, high level API",
   "main": "index.js",
@@ -22,7 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "minecraft-data": "^2.95.0",
-    "minecraft-protocol": "^1.26.5",
+    "minecraft-protocol": "file:./lib/minecraft-protocol",
     "prismarine-biome": "^1.1.1",
     "prismarine-block": "^1.10.3",
     "prismarine-chat": "^1.3.3",
