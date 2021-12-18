@@ -94,6 +94,21 @@ bot.on('kicked', console.log)
 bot.on('error', console.log)
 ```
 
+### McLeaks or EasyMC Auth
+```js
+const mineflayer = require('mineflayer')
+const path = require('path')
+
+const bot = mineflayer.createBot({
+  host: 'server-ip-here', // minecraft server ip
+  //port: 25565,          // only set if you need a port that isn't 25565
+  alt: 'your-alt-here',   // Alt that generated from EasyMC or McLeaks
+  // version: false,      // only set if you need a specific version or snapshot (ie: "1.8.9" or "1.16.5"), otherwise it's set automatically
+  auth: 'mcleaks',        // Auth type, easymc or mcleaks
+  sessionPath: path.join(__dirname, 'session.json')   // save session file path, this will generate a session file if you don't want to renew the alt, but if the session expired, you need to renew the alt and delete that file
+})
+```
+
 ### See what your bot is doing
 
 Thanks to the [prismarine-viewer](https://github.com/PrismarineJS/prismarine-viewer) project, it's possible to display in a browser window what your bot is doing.
@@ -233,7 +248,7 @@ Run `npm mocha_test -- -g <version>`, where `<version>` is a minecraft version l
 Run `npm mocha_test -- -g <test_name>`, where `<test_name>` is a name of the test like `bed`, `useChests`, `rayTrace`...
 
 ## Important Things You Need To Know
-This Source Code is cloned from [mineflayer](https://github.com/PrismarineJS/mineflayer) which have modified the dependencies minecraft-protocol and yggdrasil. Making this changes is to add support for [McLeaks](https://mcleaks.net) and [EasyMC](https://easymc.io) auth since mineflayer cannot add support for any auth that does not handle any of the mojang authentication. Apart from that, the collaborator is a self-study people for javascript. Therefore, the Licence is given to the original developer, if still have any copyright issue, we won't be responsible.
+This Source Code is cloned from [mineflayer](https://github.com/PrismarineJS/mineflayer) which have modified the dependencies minecraft-protocol and yggdrasil. Making this changes only is to add support for [McLeaks](https://mcleaks.net) and [EasyMC](https://easymc.io) auth since mineflayer cannot add support for any auth that does not handle any of the mojang authentication. Apart from that, the collaborator is a self-study people for javascript. Therefore, the Licence is given to the original developer, if still have any copyright issue, we won't be responsible.
 
 ## License
 
