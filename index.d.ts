@@ -68,7 +68,7 @@ interface BotEvents {
   rain: () => Promise<void> | void
   time: () => Promise<void> | void
   kicked: (reason: string, loggedIn: boolean) => Promise<void> | void
-  end: () => Promise<void> | void
+  end: (reason: string) => Promise<void> | void
   spawnReset: () => Promise<void> | void
   death: () => Promise<void> | void
   health: () => Promise<void> | void
@@ -194,14 +194,14 @@ export interface Bot extends TypedEmitter<BotEvents> {
 
   supportFeature: (feature: string) => boolean
 
-  end: () => void
+  end: (reason?: string) => void
 
   blockAt: (point: Vec3) => Block | null
 
   blockInSight: (maxSteps: number, vectorLength: number) => Block | null
 
   blockAtCursor: (maxDistance?: number, matcher?: Function) => Block | null
-  blockAtEntityCursor: (entity?: entity, maxDistance?: number, matcher?: Function) => Block | null
+  blockAtEntityCursor: (entity?: Entity, maxDistance?: number, matcher?: Function) => Block | null
 
   canSeeBlock: (block: Block) => boolean
 
@@ -342,6 +342,8 @@ export interface Bot extends TypedEmitter<BotEvents> {
     pages: string[],
     callback?: (err?: Error) => void
   ) => Promise<void>
+
+  openContainer: (chest: Block | Entity) => Promise<Chest | Furnace | Dispenser>
 
   openChest: (chest: Block | Entity) => Promise<Chest>
 
@@ -740,13 +742,18 @@ export class Villager extends (EventEmitter as new () => TypedEmitter<Conditiona
 }
 
 export interface VillagerTrade {
-  firstInput: Item
-  output: Item
-  hasSecondItem: boolean
-  secondaryInput: Item | null
-  disabled: boolean
-  tooluses: number
-  maxTradeuses: number
+  inputItem1: Item
+  outputItem: Item
+  inputItem2: Item | null
+  hasItem2: boolean
+  tradeDisabled: boolean
+  nbTradeUses: number
+  maximumNbTradeUses: number
+  xp?: number
+  specialPrice?: number
+  priceMultiplier?: number
+  demand?: number
+  realPrice?: number
 }
 
 export class ScoreBoard {

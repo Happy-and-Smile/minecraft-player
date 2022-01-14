@@ -1,3 +1,37 @@
+## 3.14.1
+
+* Fix arm_animation and use_entity (@amorashi)
+
+## 3.14.0
+
+* Make prismarine-entity versioned (@u9g)
+* fix(typings): Added OpenContainer (@SaubereSache)
+
+## 3.13.1
+
+* Fix bug with force lastSentPitch in bot.look (@KadaverBrutalo10)
+* Fix typo harming type safety (@Eagle-Anne)
+
+## 3.13.0
+
+* compute scoreboard displayName dynamically (@U9G)
+* SkinsRestorer fix (@U5B)
+* Fix bot not swinging arm on block place (@IceTank)
+
+## 3.12.0
+
+* Bypass anticheats that detect sensitivity (@mat-1)
+* Fix removing many players at once from tab list (@mat-1)
+* Added blockAtEntityCursor function (@DatArnoGuy)
+* add option to disable default chat patterns (@U5B)
+* Fixed wrong arm swinging (@IceTank)
+* Add pitch speed to look (@IceTank)
+* Console spam fix (@IceTank)
+* Update openVillager function to return a promise (@amoraschi)
+* Send arm_animation before use_entity (@aesthetic0001)
+* Add reason for the end of a mineflayer bot (@U5B)
+* added rejection of invalid transaction packets (anticheat fix) (@U5B)
+
 ## 3.11.2
 * Remove unnecessary and buggy inventory check in place block (@Karang)
 * Make all events allow async cb typings (@u9g)
