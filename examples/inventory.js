@@ -77,24 +77,22 @@ function sayItems (items = null) {
   }
 }
 
-function tossItem (name, amount) {
+async function tossItem (name, amount) {
   amount = parseInt(amount, 10)
   const item = itemByName(name)
   if (!item) {
     bot.chat(`I have no ${name}`)
-  } else if (amount) {
-    bot.toss(item.type, null, amount, checkIfTossed)
   } else {
-    bot.tossStack(item, checkIfTossed)
-  }
-
-  function checkIfTossed (err) {
-    if (err) {
+    try {
+      if (amount) {
+        await bot.toss(item.type, null, amount)
+        bot.chat(`tossed ${amount} x ${name}`)
+      } else {
+        await bot.tossStack(item)
+        bot.chat(`tossed ${name}`)
+      }
+    } catch (err) {
       bot.chat(`unable to toss: ${err.message}`)
-    } else if (amount) {
-      bot.chat(`tossed ${amount} x ${name}`)
-    } else {
-      bot.chat(`tossed ${name}`)
     }
   }
 }
@@ -131,7 +129,7 @@ async function craftItem (name, amount) {
   amount = parseInt(amount, 10)
   const mcData = require('minecraft-data')(bot.version)
 
-  const item = mcData.findItemOrBlockByName(name)
+  const item = mcData.itemsByName[name]
   const craftingTableID = mcData.blocksByName.crafting_table.id
 
   const craftingTable = bot.findBlock({

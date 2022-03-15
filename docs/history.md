@@ -1,3 +1,25 @@
+## 4.1.0
+
+* 1.18.2 support
+* Add nbt option to withdraw and deposit
+
+## 4.0.0
+
+* useEntity maintains sneak state
+* BREAKING: remove all callbacks in favor of promises
+
+## 3.18.0
+
+* remove callbacks from types and docs
+
+## 3.17.0
+
+* callback are now depreciated with mineflayer. Any use of them will print a warning
+
+## 3.16.0
+
+* Use prismarine-chunk for block entities
+
 ## 3.15.0
 
 * Supports 1.18
