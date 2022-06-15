@@ -256,4 +256,4 @@ This Source Code is cloned from [mineflayer](https://github.com/PrismarineJS/min
 
 ## License
 
-[MIT](LICENSE)
+[MIT](/LICENSE)
