@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/PrismarineJS/mineflayer.git"
+    "url": "git://github.com/Xeow-ET/minecraft-player.git"
   },
   "engines": {
     "node": ">=14"
   },
   "license": "MIT",
   "dependencies": {
-    "minecraft-protocol": "github:Happy-and-Smile/minecraft-protocol",
+    "minecraft-protocol": "github:Xeow-ET/minecraft-protocol",
     "minecraft-data": "^3.0.0",
     "prismarine-biome": "^1.1.1",
     "prismarine-block": "^1.13.1",
@@ -43,7 +43,7 @@
     "@types/node": "^18.0.6",
     "doctoc": "^2.0.1",
     "minecraft-wrap": "^1.3.0",
-    "mineflayer": "file:.",
+    "minecraft-player": "file:.",
     "mocha": "^10.0.0",
     "standard": "^17.0.0",
     "standard-markdown": "^7.1.0",
