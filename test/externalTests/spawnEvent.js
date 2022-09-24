@@ -1,4 +1,4 @@
-const mineflayer = require('mineflayer')
+const mineflayer = require('minecraft-player')
 const { once } = require('events')
 
 module.exports = () => async (bot) => {
